@@ -1,0 +1,37 @@
+🚀 INSTALL
+npm install
+🧪 TEST DEPLOY (Sepolia)
+
+1️⃣ Get:
+
+Infura or Alchemy RPC
+
+Sepolia ETH faucet
+
+Etherscan API key
+
+2️⃣ Create .env
+
+3️⃣ Run:
+
+npx hardhat compile
+npx hardhat run scripts/deploy.js --network sepolia
+🔍 Verify on Etherscan
+npx hardhat verify --network sepolia DEPLOYED_ADDRESS 1000000 TREASURY_ADDRESS
+🔐 Security Upgrade Recommendation
+
+After deployment:
+
+Transfer ownership to multi-sig
+
+Or renounce ownership if fully fixed token
+
+💰 What Happens On Every Transfer
+
+Example: 100 tokens sent
+
+2 burned
+
+3 sent to treasury
+
+95 to recipient
